@@ -1,6 +1,6 @@
-# Table Functions Library
+# VectorTable Library
 
-Table Functions Library is a C++ header-only library providing functions for manipulating vectors in a way similar to Lua tables.
+VectorTable Library is a C++ header-only library providing functions for manipulating vectors in a way similar to Lua tables.
 
 ## Features
 
