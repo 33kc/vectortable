@@ -19,21 +19,32 @@ VectorTable Library is a C++ header-only library providing functions for manipul
 
 ## Usage
 
-To use the Table Functions Library in your C++ project, simply include the `table_functions.hpp` header file in your source files.
+To use the VectorTable Library in your C++ project, simply include the `table.hpp` header file in your source files.
 
 ```cpp
-#include "table_functions.hpp"
+#include "table.hpp"
+#include <iostream>
 
 int main() {
     std::vector<int> vec = {1, 2, 3, 4, 5};
+    
+    // Inserting an element at index 2
     table::insert(vec, 2, 10);
+    
+    // Removing an element at index 3
     table::remove(vec, 3);
-    std::cout << "Vector length: " << TableFunctions::getn(vec) << std::endl;
-    std::cout << "Concatenated vector: " << TableFunctions::concat(vec, ", ") << std::endl;
-    TableFunctions::sort(vec);
-    // ... 
+    
+    std::cout << "Vector length: " << table::getn(vec) << std::endl;
+    std::cout << "Concatenated vector: " << table::concat(vec, ", ") << std::endl;
+    
+    // Sorting the vector
+    table::sort(vec);
+    
+    // Outputting vector elements
+    for (auto& element : vec) {
+        std::cout << element << " ";
+    }
+    std::cout << std::endl;
+    
     return 0;
 }
-```
-
- made out of boredom // mutli language support?
