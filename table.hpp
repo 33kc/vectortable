@@ -10,20 +10,22 @@
 namespace table {
     // Function to insert an element into a vector at a specified position
     template<typename T>
-    void insert(std::vector<T>& table, size_t pos, const T& value) {
-        if (pos > table.size()) {
-            throw std::out_of_range("Position out of range");
+    void insert(std::vector<T>& table, size_t index, const T& value) {
+        if (index > table.size()) {
+            throw std::out_of_range("Index out of range");
         }
-        table.insert(table.begin() + pos, value);
+        table.insert(table.begin() + index, value);
     }
 
+    // Other functions remain unchanged...
+    
     // Function to remove an element from a vector at a specified position
     template<typename T>
-    void remove(std::vector<T>& table, size_t pos) {
-        if (pos >= table.size()) {
-            throw std::out_of_range("Position out of range");
+    void remove(std::vector<T>& table, size_t index) {
+        if (index >= table.size()) {
+            throw std::out_of_range("Index out of range");
         }
-        table.erase(table.begin() + pos);
+        table.erase(table.begin() + index);
     }
 
     // Function to get the length of a vector
