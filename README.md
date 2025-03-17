@@ -19,7 +19,7 @@ VectorTable Library is a C++ header-only library providing functions for manipul
 
 ## Usage
 
-To use the VectorTable Library in your C++ project, simply include the `table.hpp` header file in your source files.
+Add the header file to your project folder to use it
 
 ```cpp
 #include "table.hpp"
